@@ -1,0 +1,32 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./src/*"],
+      "@components": ["./src/components/index.ts"],
+      "@components/*": ["./src/components/*"],
+      "@features": ["./src/features/index.ts"],
+      "@features/*": ["./src/features/*"],
+      "@lib": ["./src/lib/env.ts"],
+      "@lib/*": ["./src/lib/*"],
+      "@competencias-platform/ui": ["../../packages/ui/src/index.ts"],
+      "@competencias-platform/contracts": ["../../packages/contracts/src/index.ts"],
+      "@competencias-platform/validation": ["../../packages/validation/src/index.ts"],
+      "@competencias-platform/config": ["../../packages/config/src/index.ts"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "next.config.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": ["node_modules"]
+}
