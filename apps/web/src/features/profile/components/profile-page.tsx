@@ -80,6 +80,7 @@ export function ProfilePage() {
   async function handleProfileUpdate(values: ProfileEditValues) {
     const data = await profileService.updateCurrentProfile(developmentUserId, values);
     setPageState({ data, status: "loaded" });
+    window.dispatchEvent(new Event("profile-updated"));
   }
 
   if (simulatedState) {

@@ -17,7 +17,7 @@ export function Input({ className, errorMessage, id, label, ...props }: InputPro
         aria-describedby={errorId}
         aria-invalid={Boolean(errorMessage)}
         className={cn(
-          "min-h-11 w-full rounded-md border border-input bg-surface px-3 text-body text-foreground outline-none transition-colors placeholder:text-muted-foreground hover:border-primary/60 focus-visible:border-primary focus-visible:ring-2 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-55",
+          "min-h-11 w-full rounded-md border border-input bg-surface-elevated px-3 text-body text-foreground shadow-xs outline-none transition duration-200 placeholder:text-muted-foreground hover:border-primary/50 hover:bg-card-hover focus-visible:border-primary focus-visible:ring-2 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-55",
           className
         )}
         id={inputId}

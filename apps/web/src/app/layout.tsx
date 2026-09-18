@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { BottomNavigation, PageContainer, SportsNavigation, TopNavigation } from "@components";
 import { webEnv } from "@/lib/env";
 import { AppProviders } from "@/providers";
@@ -36,7 +37,16 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body>
         <AppProviders>
           <TopNavigation />
-          <SportsNavigation />
+          <Suspense
+            fallback={
+              <div
+                aria-hidden="true"
+                className="sticky top-16 z-30 min-h-12 border-b border-border/80 bg-background/90 shadow-xs backdrop-blur-md lg:min-h-14"
+              />
+            }
+          >
+            <SportsNavigation />
+          </Suspense>
           <PageContainer>{children}</PageContainer>
           <BottomNavigation />
         </AppProviders>

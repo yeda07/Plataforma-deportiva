@@ -15,7 +15,11 @@ export type TabsProps = Readonly<{
 
 export function Tabs({ ariaLabel, items, onValueChange, value }: TabsProps) {
   return (
-    <div aria-label={ariaLabel} className="flex gap-1 overflow-x-auto rounded-md bg-muted p-1" role="tablist">
+    <div
+      aria-label={ariaLabel}
+      className="flex gap-1 overflow-x-auto rounded-lg border border-border bg-surface-subtle p-1 shadow-xs"
+      role="tablist"
+    >
       {items.map((item) => (
         <TabButton
           aria-selected={item.value === value}
@@ -39,7 +43,7 @@ function TabButton({
   return (
     <button
       className={cn(
-        "min-h-9 whitespace-nowrap rounded-sm px-3 text-caption font-semibold text-muted-foreground transition-colors hover:bg-surface hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring aria-selected:bg-surface aria-selected:text-foreground",
+        "min-h-9 whitespace-nowrap rounded-md px-3 text-caption font-bold text-muted-foreground transition duration-200 hover:bg-surface hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring active:scale-[0.98] aria-selected:bg-gradient-button aria-selected:text-primary-foreground aria-selected:shadow-sm",
         className
       )}
       {...props}

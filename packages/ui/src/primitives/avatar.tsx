@@ -11,7 +11,7 @@ export function Avatar({ className, fallback, imageAlt = "", imageSrc, ...props 
   return (
     <div
       className={cn(
-        "inline-flex size-10 shrink-0 items-center justify-center overflow-hidden rounded-full border border-border bg-muted text-label text-foreground",
+        "inline-flex size-10 shrink-0 items-center justify-center overflow-hidden rounded-full border border-border-strong bg-gradient-brand text-label font-extrabold text-primary-foreground shadow-sm ring-2 ring-surface",
         className
       )}
       {...props}

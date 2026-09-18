@@ -14,6 +14,8 @@ export { LiveBadge } from "./primitives/live-badge";
 export type { LiveBadgeProps } from "./primitives/live-badge";
 export { Modal } from "./primitives/modal";
 export type { ModalProps } from "./primitives/modal";
+export { Progress } from "./primitives/progress";
+export type { ProgressProps, ProgressTone } from "./primitives/progress";
 export { SearchInput } from "./primitives/search-input";
 export type { SearchInputProps } from "./primitives/search-input";
 export { Select } from "./primitives/select";
